@@ -1,75 +1,132 @@
 /* Reset CSS */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da Página */
 body {
-    font-family: 'Courier New', Courier, monospace; /* 'Arial', sans-serif; */
-    background-color: #ffe6a7;
-    color: #bc6c25;
-    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace; /* Fonte tipo máquina de escrever */
+    background-color: #ffe6a7; /* Fundo amarelo claro */
+    color: #bc6c25; /* Texto marrom claro */
+    line-height: 1.8; /* Espaçamento entre linhas para legibilidade */
     padding: 20px;
 }
 
+/* Cabeçalho */
 header {
     text-align: center;
     padding: 20px 0;
-    background-color: #bc6c25;
+    background-color: #bc6c25; /* Fundo marrom claro */
     color: white;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
+/* Navegação */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block; /* Espaçamento em linha */
+    margin: 0 15px; /* Aumenta a distância entre os links */
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #ffe6a7; /* Efeito hover no link */
+}
+
+/* Área Principal */
 main {
-    width: 80%; /* Permite o texto ocupar mais espaço */
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #ffe6a7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ocupa mais espaço horizontal */
+    max-width: 900px;
+    margin: 40px auto; /* Centraliza e espaça do topo */
+    padding: 30px;
+    background: #fff; /* Fundo branco para contraste */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 8px; /* Cantos arredondados */
 }
 
+/* Seções */
+section {
+    margin-bottom: 40px; /* Espaço entre seções */
+}
+
+section h1, section h2 {
+    color: #bc6c25;
+    margin-bottom: 15px; /* Espaço entre o título e o conteúdo */
+}
+
+section p {
+    margin-top: 10px; /* Espaço entre os parágrafos */
+    text-align: justify; /* Justifica o texto para melhor leitura */
+}
+
+/* Botão GitHub */
+.github-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #bc6c25;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #8b572a; /* Escurece no hover */
+}
+
+/* Rodapé */
 footer {
     text-align: center;
     padding: 10px 0;
     background-color: #bc6c25;
     color: white;
-    position: fixed;
+    margin-top: 40px; /* Distância do conteúdo principal */
+    position: static; /* Torna o rodapé fixo apenas se necessário */
     bottom: 0;
     width: 100%;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     main {
-        width: 90%;
+        width: 95%; /* O conteúdo ocupa quase toda a largura */
         padding: 20px;
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     nav ul {
-        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 }
