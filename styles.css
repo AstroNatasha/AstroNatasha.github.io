@@ -1,5 +1,4 @@
-/* Reset CSS */
-/* Reset CSS */
+/* Cansei de Ser Sexy */
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +8,8 @@
 /* Corpo da Página */
 body {
     font-family: 'Courier New', Courier, monospace; /* Fonte tipo máquina de escrever */
-    background-color: #ffe6a7; /* Fundo amarelo claro */
-    color: #bc6c25; /* Texto marrom claro */
+    background-color: #f9f7e8; /* ffe6a7; Fundo amarelo claro */
+    color: #2f2f2f;  /* bc6c25; Texto marrom claro */
     line-height: 1.8; /* Espaçamento entre linhas para legibilidade */
     padding: 20px;
 }
@@ -56,11 +55,11 @@ nav ul li a:hover {
 main {
     width: 80%; /* Ocupa mais espaço horizontal */
     max-width: 900px;
-    margin: 40px auto; /* Centraliza e espaça do topo */
+    margin: 60px auto; /* Centraliza e espaça do topo */
     padding: 30px;
-    background: #fff; /* Fundo branco para contraste */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 8px; /* Cantos arredondados */
+    background: none;
+    box-shadow: none;
+    border-radius: 0; /* Cantos arredondados */
 }
 
 /* Seções */
@@ -100,10 +99,11 @@ footer {
     padding: 10px 0;
     background-color: #bc6c25;
     color: white;
-    margin-top: 40px; /* Distância do conteúdo principal */
+    margin-top: 60px; /* Distância do conteúdo principal */
     position: static; /* Torna o rodapé fixo apenas se necessário */
     bottom: 0;
     width: 100%;
+    font-size: 0.8rem;
 }
 
 /* Responsividade */
@@ -112,21 +112,13 @@ footer {
         padding: 10px;
     }
 
-    main {
-        width: 95%; /* O conteúdo ocupa quase toda a largura */
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
+    h1 {
+        font-size: 2rem;
     }
 
     nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+        flex-direction: column;
+        gap: 10px;
     }
 }
+
