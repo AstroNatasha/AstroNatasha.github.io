@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Courier New', Courier, monospace; /* 'Arial', sans-serif; */
+    background-color: #ffe6a7;
     color: #bc6c25;
     line-height: 1.6;
     padding: 20px;
@@ -44,7 +44,7 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: #ffe6a7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
