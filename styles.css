@@ -41,7 +41,8 @@ nav ul li a {
 }
 
 main {
-    max-width: 800px;
+    width: 80%; /* Permite o texto ocupar mais espaço */
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
     background: #ffe6a7;
@@ -56,4 +57,19 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
 }
