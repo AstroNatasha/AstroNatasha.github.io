@@ -4,80 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f9f7e8;
-            color: #2f2f2f;
-            line-height: 1.8;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #bc6c25;
-        }
-
-        #posts-container {
-            margin: 0 auto;
-            max-width: 800px;
-        }
-
-        article {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #bc6c25;
-            border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        article h2 {
-            color: #bc6c25;
-            margin-bottom: 10px;
-        }
-
-        article span {
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        #pagination {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .pagination-button {
-            margin: 0 5px;
-            padding: 5px 10px;
-            font-size: 1rem;
-            border: none;
-            background-color: #bc6c25;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .pagination-button:hover {
-            background-color: #8b572a;
-        }
-
-        .pagination-button[style*="font-weight: bold"] {
-            background-color: #ffe6a7;
-            color: #2f2f2f;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Conecta com o CSS geral -->
 </head>
 <body>
     <header>
@@ -85,8 +12,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
-        </nav>  
+        </nav>
     </header>
 
     <!-- Contêiner dos posts -->
@@ -101,65 +29,45 @@
             <p>Esse é o conteúdo do meu segundo post.</p>
             <span>Publicado em: 13 de Dezembro, 2024</span>
         </article>
-        <article>
-            <h2>Meu Terceiro Post</h2>
-            <p>Esse é o conteúdo do meu terceiro post.</p>
-            <span>Publicado em: 14 de Dezembro, 2024</span>
-        </article>
-        <article>
-            <h2>Meu Quarto Post</h2>
-            <p>Esse é o conteúdo do meu quarto post.</p>
-            <span>Publicado em: 15 de Dezembro, 2024</span>
-        </article>
-        <article>
-            <h2>Meu Quinto Post</h2>
-            <p>Esse é o conteúdo do meu quinto post.</p>
-            <span>Publicado em: 16 de Dezembro, 2024</span>
-        </article>
+        <!-- Mais posts... -->
     </div>
 
     <!-- Contêiner para os botões de paginação -->
     <div id="pagination"></div>
 
     <script>
-        const postsPerPage = 10; // Número de posts por página
+        const postsPerPage = 2;
         const container = document.getElementById('posts-container');
         const pagination = document.getElementById('pagination');
-        const articles = Array.from(container.children); // Converte os posts em um array
+        const articles = Array.from(container.children);
 
         let currentPage = 1;
         const totalPages = Math.ceil(articles.length / postsPerPage);
 
-        // Função para mostrar os posts da página atual
         function showPage(page) {
-            // Esconde todos os posts
-            articles.forEach((article, index) => {
+            articles.forEach(article => {
                 article.style.display = 'none';
             });
 
-            // Calcula os índices de início e fim
             const startIndex = (page - 1) * postsPerPage;
             const endIndex = startIndex + postsPerPage;
 
-            // Mostra apenas os posts da página atual
             articles.slice(startIndex, endIndex).forEach(article => {
                 article.style.display = 'block';
             });
 
-            // Atualiza a navegação de páginas
             updatePagination();
         }
 
-        // Função para criar os botões de paginação
         function updatePagination() {
-            pagination.innerHTML = ''; // Limpa o contêiner da paginação
+            pagination.innerHTML = '';
 
             for (let i = 1; i <= totalPages; i++) {
                 const button = document.createElement('button');
                 button.textContent = i;
                 button.className = 'pagination-button';
                 if (i === currentPage) {
-                    button.style.fontWeight = 'bold'; // Destaca a página atual
+                    button.style.fontWeight = 'bold';
                 }
                 button.addEventListener('click', () => {
                     currentPage = i;
@@ -169,7 +77,6 @@
             }
         }
 
-        // Mostra a primeira página ao carregar
         showPage(currentPage);
     </script>
 </body>
