@@ -18,13 +18,14 @@ body {
 header {
     text-align: center;
     padding: 20px 0;
-    background-color: #bc6c25; /* Fundo marrom claro */
+    background-color: transparent; /* Fundo marrom claro */
     color: white;
+    border-bottom: none; /* Remove bordas (se houver) */
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
 }
 
 /* Navegação */
@@ -36,7 +37,7 @@ nav ul {
 
 nav ul li {
     display: inline-block; /* Espaçamento em linha */
-    margin: 0 15px; /* Aumenta a distância entre os links */
+    margin: 0 10px; /* Aumenta a distância entre os links */
 }
 
 nav ul li a {
