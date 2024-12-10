@@ -19,7 +19,7 @@ header {
     text-align: center;
     padding: 20px 0;
     background-color: transparent; /* Fundo marrom claro */
-    color: white;
+    color: #2f2f2f;
     border-bottom: none; /* Remove bordas (se houver) */
 }
 
@@ -42,7 +42,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #2f2f2f;
     font-weight: bold;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -98,13 +98,13 @@ section p {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #bc6c25;
-    color: white;
+    background-color: none;
+    color: #2f2f2f;
     margin-top: 60px; /* Distância do conteúdo principal */
     position: static; /* Torna o rodapé fixo apenas se necessário */
     bottom: 0;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
 }
 
 /* Responsividade */
