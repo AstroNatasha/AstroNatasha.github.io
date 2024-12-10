@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures/title>
+    <link rel="stylesheet" href="styles.css"> <!-- Reutiliza o CSS geral -->
+    <style>
+        /* Estilo da galeria */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 fotos por linha */
+            gap: 10px; /* Espaço entre as fotos */
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Aumenta ligeiramente no hover */
+        }
+
+        /* Modal */
+        .modal {
+            display: none; /* Oculta por padrão */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+            color: #fff;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #2f2f2f; /* Fundo escuro */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .modal img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .modal h3 {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+            background: none;
+            border: none;
+        }
+
+        .close-modal:hover {
+            color: #ffe6a7; /* Cor de destaque ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galeria de Fotos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="photos.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <!-- Cada .gallery-item será uma foto -->
+            <div class="gallery-item" data-caption="Minha primeira foto">
+                <img src="foto1.jpg" alt="Foto 1">
+            </div>
+            <!-- Adicione mais fotos -->
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <img id="modal-img" src="" alt="Foto">
+            <h3 id="modal-caption"></h3>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona os elementos
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalCaption = document.getElementById('modal-caption');
+        const closeModal = document.querySelector('.close-modal');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        // Exibe o modal ao clicar em uma foto
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                const caption = item.getAttribute('data-caption');
+                modalImg.src = imgSrc;
+                modalCaption.textContent = caption;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Fecha o modal ao clicar no botão "X"
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Fecha o modal ao clicar fora do conteúdo
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
