@@ -124,3 +124,27 @@ footer {
     }
 }
 
+/* Botões de Paginação (Estilo Igual ao Botão do GitHub) */
+.pagination-button {
+    display: inline-block;
+    padding: 12px 24px; /* Mesmo tamanho do botão GitHub */
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #fff; /* Texto branco */
+    background-color: #bc6c25; /* Fundo laranja */
+    text-decoration: none; /* Remove sublinhado */
+    border: none;
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza mudanças */
+}
+
+.pagination-button:hover {
+    background-color: #8b572a; /* Fundo mais escuro no hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.pagination-button:active {
+    background-color: #6e4520; /* Fundo ainda mais escuro ao clicar */
+    transform: scale(0.95); /* Leve redução ao clicar */
+}
+
