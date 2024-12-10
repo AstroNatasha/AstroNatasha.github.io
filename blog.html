@@ -32,51 +32,50 @@
     </div>
 
     <!-- Contêiner para os botões de paginação -->
-    <div id="pagination"></div>
+<div id="pagination"></div>
+<script>
+    const postsPerPage = 10;
+    const container = document.getElementById('posts-container');
+    const pagination = document.getElementById('pagination');
+    const articles = Array.from(container.children);
 
-    <script>
-        const postsPerPage = 10;
-        const container = document.getElementById('posts-container');
-        const pagination = document.getElementById('pagination');
-        const articles = Array.from(container.children);
+    let currentPage = 1;
+    const totalPages = Math.ceil(articles.length / postsPerPage);
 
-        let currentPage = 1;
-        const totalPages = Math.ceil(articles.length / postsPerPage);
+    function showPage(page) {
+        articles.forEach(article => {
+            article.style.display = 'none';
+        });
 
-        function showPage(page) {
-            articles.forEach(article => {
-                article.style.display = 'none';
-            });
+        const startIndex = (page - 1) * postsPerPage;
+        const endIndex = startIndex + postsPerPage;
 
-            const startIndex = (page - 1) * postsPerPage;
-            const endIndex = startIndex + postsPerPage;
+        articles.slice(startIndex, endIndex).forEach(article => {
+            article.style.display = 'block';
+        });
 
-            articles.slice(startIndex, endIndex).forEach(article => {
-                article.style.display = 'block';
-            });
+        updatePagination();
+    }
 
-            updatePagination();
-        }
+    function updatePagination() {
+        pagination.innerHTML = '';
 
-        function updatePagination() {
-            pagination.innerHTML = '';
-
-            for (let i = 1; i <= totalPages; i++) {
-                const button = document.createElement('button');
-                button.textContent = i;
-                button.className = 'pagination-button';
-                if (i === currentPage) {
-                    button.style.fontWeight = 'bold';
-                }
-                button.addEventListener('click', () => {
-                    currentPage = i;
-                    showPage(currentPage);
-                });
-                pagination.appendChild(button);
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.textContent = i;
+            button.className = 'pagination-button'; /* Certifique-se de usar esta classe */
+            if (i === currentPage) {
+                button.style.fontWeight = 'bold';
             }
+            button.addEventListener('click', () => {
+                currentPage = i;
+                showPage(currentPage);
+            });
+            pagination.appendChild(button);
         }
+    }
 
-        showPage(currentPage);
-    </script>
+    showPage(currentPage);
+</script>
 </body>
 </html>
