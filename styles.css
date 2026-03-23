@@ -18,9 +18,11 @@ body {
 header {
     text-align: center;
     padding: 20px 0;
-    background-color: transparent; /* Fundo marrom claro */
-    color: #bc6c25; 
-    border-bottom: none; /* Remove bordas (se houver) */
+    background-color: #f9f7e8; /* Fundo claro que combina com o corpo */
+    color: #bc6c25;
+    border-bottom: 2px solid #bc6c25;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
 header h1 {
