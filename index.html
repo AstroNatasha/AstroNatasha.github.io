@@ -16,34 +16,62 @@
             </ul>
         </nav>
     </header>
+
     <main>
+
+        <!-- 📚 BOOK HERO SECTION -->
+        <section class="book-hero">
+            <div class="book-content">
+                <img src="images/livro.jpg" alt="Um Universo em Você" class="book-cover">
+
+                <div class="book-text">
+                    <h2>📚 My Book is out!</h2>
+                    <p><strong>“Um Universo em Você”</strong></p>
+                    <p>A book I wrote to show that science is for everyone — especially curious minds ✨</p>
+
+                    <a href="https://www.amazon.com.br/universo-Natasha-Amanda-Bezerra-Ilustradora/dp/6554123571"
+                       target="_blank"
+                       class="book-button">
+                       Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h1>🚀 Hey you, I'm Natasha.</h1>
             <img src="images/soyyo.jpeg" alt="Natasha" class="hexagon-img">
             <p>But feel free to call me Tasha!</p>
             <p>As you can see, I wear multiple hats. I'm passionate about the universe, people, and data. I've always wanted my journey to blend the precision of data science with the creativity of storytelling.</p>
         </section>
+
         <section>
             <h2>🎓 Education</h2>
             <p>I'm an astrophysicist (B.Sc. from the Federal University of Rio de Janeiro) and hold a M.Sc. in Systems Engineering (PESC/COPPE, UFRJ). I am currently starting my PhD, working at the intersection of optimization, data science, and real-world applications. Here, you'll find some of my projects.</p>
         </section>
+
         <section>
             <h2>💼 Professional Journey</h2>
             <p>Professionally, I've been working as a data scientist since 2018. I began at the Brazilian Institute of Economics as a Business Analytics professional and full-stack developer. Later, I ventured into People Analytics at Sinch, and later I worked with Analytics Engineering at Stone Co, contributing as a business analytics professional, providing analyses that assist stakeholders in making strategic decisions about their products. Currently I'm working with Systems Engineering at the Electrical Energy Research Center. My main programming languages are R, SQL and Python. You can find more details on my LinkedIn profile!</p>
         </section>
+
         <section>
             <h2>🧪 Scientific Passion</h2>
             <p>My scientific inclination fuels my keen interest in creating well-documented projects, where I can discover new things and solve problems. I've dedicated several years of my life to topics such as machine learning, AI, and data visualization. In 2023, I published my first children's book, "A Universe Within You" (Um Universo em Você) aiming to demystify the idea of genius and what it means to be a scientist, emphasizing the common ground between scientists and children.</p>
             <p>I promise I'll not make a joke about being a rocket scientist. Feel free to reach out!✨</p>
         </section>
+
         <section>
             <h2>📂 My GitHub</h2>
             <a href="https://github.com/AstroNatasha" target="_blank" class="github-button">Straight to the point? Check out my repositories.</a>
         </section>
+
     </main>
+
     <footer>
         <p>&copy; 2024 Natasha Costa</p>
     </footer>
+
     <style>
         .github-button {
             display: inline-block;
@@ -55,9 +83,11 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         .github-button:hover {
             background-color: #555;
         }
+
         .hexagon-img {
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             width: 400px;
@@ -66,6 +96,54 @@
             display: block;
             object-fit: cover;
             object-position: bottom;
+        }
+
+        /* 📚 BOOK SECTION */
+        .book-hero {
+            background: #0f172a;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .book-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .book-cover {
+            width: 180px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .book-text {
+            max-width: 400px;
+        }
+
+        .book-text h2 {
+            margin-bottom: 10px;
+        }
+
+        .book-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .book-button:hover {
+            background: #0ea5e9;
+            transform: scale(1.05);
         }
     </style>
 </body>
