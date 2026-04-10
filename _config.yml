@@ -1,0 +1,6 @@
+title: Natasha Costa
+description: Blog e site pessoal
+url: "https://natasha.wiki"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
