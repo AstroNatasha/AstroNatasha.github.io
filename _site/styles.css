@@ -1,0 +1,152 @@
+/* Cansei de Ser Sexy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da Página */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fonte tipo máquina de escrever */
+    background-color: #f9f7e8; /* ffe6a7; Fundo amarelo claro */
+    color: #bc6c25;  /* bc6c25; Texto marrom claro */
+    line-height: 1.8; /* Espaçamento entre linhas para legibilidade */
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f7e8; /* Fundo claro que combina com o corpo */
+    color: #bc6c25;
+    border-bottom: 2px solid #bc6c25;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+header h1 {
+    color: #bc6c25;
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Espaçamento em linha */
+    margin: 0 10px; /* Aumenta a distância entre os links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bc6c25;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffe6a7; /* Efeito hover no link */
+}
+
+/* Área Principal */
+main {
+    width: 80%; /* Ocupa mais espaço horizontal */
+    max-width: 900px;
+    margin: 60px auto; /* Centraliza e espaça do topo */
+    padding: 30px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0; /* Cantos arredondados */
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px; /* Espaço entre seções */
+}
+
+section h1, section h2 {
+    color: #bc6c25;
+    margin-bottom: 15px; /* Espaço entre o título e o conteúdo */
+}
+
+section p {
+    margin-top: 10px; /* Espaço entre os parágrafos */
+    text-align: justify; /* Justifica o texto para melhor leitura */
+}
+
+/* Botão GitHub */
+.github-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #bc6c25;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #8b572a; /* Escurece no hover */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: none;
+    color: #bc6c25;
+    margin-top: 60px; /* Distância do conteúdo principal */
+    position: static; /* Torna o rodapé fixo apenas se necessário */
+    bottom: 0;
+    width: 100%;
+    font-size: 1.0rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Botões de Paginação (Estilo Igual ao Botão do GitHub) */
+.pagination-button {
+    display: inline-block;
+    padding: 12px 24px; /* Mesmo tamanho do botão GitHub */
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #fff; /* Texto branco */
+    background-color: #bc6c25; /* Fundo laranja */
+    text-decoration: none; /* Remove sublinhado */
+    border: none;
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza mudanças */
+}
+
+.pagination-button:hover {
+    background-color: #8b572a; /* Fundo mais escuro no hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.pagination-button:active {
+    background-color: #6e4520; /* Fundo ainda mais escuro ao clicar */
+    transform: scale(0.95); /* Leve redução ao clicar */
+}
+
