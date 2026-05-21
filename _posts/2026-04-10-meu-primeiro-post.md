@@ -1,8 +1,14 @@
 ---
 layout: post
-title: "Meu primeiro post"
+title: Meu primeiro post
+date: 2026-05-21
 ---
+Câmbio!!**sadsa**
 
-Olá. Este é o primeiro post do blog.
 
-Se você está lendo isso, o Jekyll está funcionando corretamente.
+
+![alt text:? éfdsffdsf](/images/misc/cvrplib.png "dfsdOIsda")
+
+
+
+ULALAAAAAA
