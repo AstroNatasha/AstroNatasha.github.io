@@ -1,8 +1,4 @@
 albums:
-  - name: Misc
+  - name: On Duty!
     folder: misc
-    photos:
-      - file: wikigurl.jpeg
-        caption: ""
-      - file: galaxia.png
-        caption: ""
+    photos: []
