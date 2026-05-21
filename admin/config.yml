@@ -17,6 +17,28 @@ collections:
       - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD" }
       - { label: Conteúdo, name: body, widget: markdown }
 
+  - name: daily
+    label: Daily Digest
+    folder: _daily
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: daily_post }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Conteúdo, name: body, widget: markdown }
+
+  - name: phd
+    label: PhD Journey
+    folder: _phd
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: phd_post }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Conteúdo, name: body, widget: markdown }
+
   - name: galleries
     label: Galerias
     files:

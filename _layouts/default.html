@@ -20,6 +20,12 @@
                 {% unless page.title == "Pictures" %}
                 <li><a href="{{ '/pictures.html' | relative_url }}">Pictures</a></li>
                 {% endunless %}
+                {% unless page.title == "Daily Digest" %}
+                <li><a href="{{ '/daily.html' | relative_url }}">Daily Digest</a></li>
+                {% endunless %}
+                {% unless page.title == "PhD Journey" %}
+                <li><a href="{{ '/phd.html' | relative_url }}">PhD Journey</a></li>
+                {% endunless %}
             </ul>
         </nav>
     </header>

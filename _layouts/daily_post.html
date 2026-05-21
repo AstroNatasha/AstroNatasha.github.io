@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date: "%B %d, %Y" }}</p>
+
+{{ content }}
+
+<p><a href="{{ '/daily.html' | relative_url }}">← Daily Digest</a></p>

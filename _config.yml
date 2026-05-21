@@ -5,3 +5,11 @@ baseurl: ""
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 future: true
+
+collections:
+  daily:
+    output: true
+    permalink: /daily/:year/:month/:day/:title/
+  phd:
+    output: true
+    permalink: /phd/:year/:month/:day/:title/
