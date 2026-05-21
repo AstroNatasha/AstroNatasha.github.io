@@ -1,4 +1,6 @@
 albums:
-  - name: On Duty!
+  - name: what I've been up to | 2026
     folder: misc
-    photos: []
+    photos:
+      - file: wikigurl.jpeg
+        caption: carnaval 2026
