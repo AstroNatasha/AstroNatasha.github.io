@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: AstroNatasha/AstroNatasha.github.io
+  branch: main
+
+media_folder: images/misc
+public_folder: /images/misc
+
+collections:
+  - name: posts
+    label: Posts
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Conteúdo, name: body, widget: markdown }
+
+  - name: galleries
+    label: Galerias
+    files:
+      - label: Álbuns
+        name: albums
+        file: _data/galleries.yml
+        fields:
+          - label: Álbuns
+            name: albums
+            widget: list
+            fields:
+              - { label: Nome, name: name, widget: string }
+              - { label: Pasta, name: folder, widget: string, hint: "Sem espaços ou acentos. Ex: bjj, bouldering" }
+              - label: Fotos
+                name: photos
+                widget: list
+                fields:
+                  - { label: Arquivo, name: file, widget: string, hint: "Ex: foto.jpg" }
+                  - { label: Legenda, name: caption, widget: string, required: false }

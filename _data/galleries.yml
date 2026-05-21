@@ -1,7 +1,8 @@
-- name: Misc
-  folder: misc
-  photos:
-    - file: wikigurl.jpeg
-      caption: ""
-    - file: galaxia.png
-      caption: ""
+albums:
+  - name: Misc
+    folder: misc
+    photos:
+      - file: wikigurl.jpeg
+        caption: ""
+      - file: galaxia.png
+        caption: ""
