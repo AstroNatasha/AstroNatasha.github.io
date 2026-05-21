@@ -11,9 +11,15 @@
         <h1>{{ site.title }}</h1>
         <nav>
             <ul>
+                {% unless page.title == "Home" %}
                 <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                {% endunless %}
+                {% unless page.title == "Blog" %}
                 <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+                {% endunless %}
+                {% unless page.title == "Pictures" %}
                 <li><a href="{{ '/pictures.html' | relative_url }}">Pictures</a></li>
+                {% endunless %}
             </ul>
         </nav>
     </header>
