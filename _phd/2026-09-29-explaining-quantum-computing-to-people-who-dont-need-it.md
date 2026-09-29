@@ -9,8 +9,6 @@ Here is the problem with it. Suppose a machine really did try every possible ans
 
 The better explanation needs one idea that has no everyday equivalent, and it is worth taking slowly.
 
-![quantum-computers-and-accelerated-discovery_40645906341_o-1000](/images/misc/quantum-computers-and-accelerated-discovery_40645906341_o-1000.jpg)
-
 Start with a coin. If I flip a fair coin, there is a 50% chance of heads. If I flip it again, the chance is still 50%. Randomness piles up and never undoes itself. That is because probabilities are always positive numbers, and when there are several ways to reach the same outcome, their probabilities add.
 
 A qubit is described differently. Instead of a probability for each outcome, it carries a number called an amplitude, and the probability you observe comes from squaring it. The crucial difference is that amplitudes can be negative. (Strictly speaking they can be complex numbers, but negative ones are enough to see what matters.) When two ways of reaching the same outcome have amplitudes of opposite sign, they do not add up. They cancel.
