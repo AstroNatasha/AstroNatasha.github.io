@@ -7,8 +7,6 @@ Ok, so... This September I presented a poster on QUBO-WiSARD at CBCTQ, the Brazi
 
 Most of us learned that a neural network is a set of weights and that learning means adjusting them. You compute a loss, take its gradient, nudge every weight a little and repeat for many epochs. From there, "weightless neural network" sounds almost like a contradiction. **If there are no weights and no backpropagation, what exactly is being learned?**
 
-If you *learned* machine learning in the last ten years, you probably learned that a neural network is a set of weights and that learning means adjusting them. You compute a loss, take its gradient, nudge every weight a little and repeat for many epochs. So when people hear about weightless neural networks, the usual reaction is confusion. If there are no weights and no backpropagation, what exactly is being learned?
-
 The short answer is that learning becomes writing to memory. The longer answer is worth walking through, because once it clicks the idea fits in a paragraph, and it says something interesting about what learning actually requires.
 
 The best-known model in this family is WiSARD, named after Wilkie, Stonham and Aleksander, who built it as a hardware recognition device in the early 1980s. Its roots go back further, to the n-tuple method that Bledsoe and Browning proposed in 1959 for machine reading of characters.
